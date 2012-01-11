@@ -29,21 +29,22 @@
     
     CGContextSaveGState(context);
     {
-               
-        //CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
+        
+        CGContextSetStrokeColorWithColor(context, [UIColor grayColor].CGColor);
         CGContextSetLineWidth(context, 3);
         UIBezierPath *path;
+        
         path = [UIBezierPath bezierPathWithRoundedRect:rect
                                      byRoundingCorners:UIRectCornerAllCorners
-                                           cornerRadii:CGSizeMake(8.0, 8.0)];
+                                           cornerRadii:CGSizeMake(7.0, 7.0)];
+        
         [[UIColor whiteColor] setFill];
         [path fill];
         //[[UIColor whiteColor] setStroke];
-        //[path stroke];
+        [path stroke];
         
         UIImage *img = [UIImage imageNamed:@"goofy_smile.png"];
         [img drawInRect:CGRectMake(self.bounds.size.width/2 - 100/2, self.bounds.size.height/2 - 100/2, 100, 100)];
-
         
     }
     CGContextRestoreGState(context);
