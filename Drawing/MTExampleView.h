@@ -10,4 +10,6 @@
 
 @interface MTExampleView : UIView
 
+CGRect rectFor1PxStroke(CGRect rect);
+
 @end
