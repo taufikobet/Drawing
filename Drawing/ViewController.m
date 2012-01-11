@@ -20,6 +20,7 @@
 - (void)loadView {
     
     MTExampleView *mainView = [[MTExampleView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    [mainView setContentMode:UIViewContentModeCenter];
     
     self.view = mainView;
 }
