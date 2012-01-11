@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MTExampleView.h"
 
 @implementation ViewController
 
@@ -14,6 +15,13 @@
 {
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
+}
+
+- (void)loadView {
+    
+    MTExampleView *mainView = [[MTExampleView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    
+    self.view = mainView;
 }
 
 #pragma mark - View lifecycle
