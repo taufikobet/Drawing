@@ -11,19 +11,23 @@
 
 @implementation ViewController
 
+@synthesize mainView;
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Release any cached data, images, etc that aren't in use.
 }
 
+
 - (void)loadView {
     
-    MTExampleView *mainView = [[MTExampleView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    mainView = [[MTExampleView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     [mainView setContentMode:UIViewContentModeCenter];
     
     self.view = mainView;
 }
+
 
 #pragma mark - View lifecycle
 
@@ -38,6 +42,8 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    self.mainView = nil;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated

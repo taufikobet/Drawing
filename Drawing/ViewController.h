@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class MTExampleView;
+
 @interface ViewController : UIViewController
+
+@property (nonatomic, strong) MTExampleView *mainView;
 
 @end
